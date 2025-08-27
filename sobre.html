@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>Artes da Amazônia - Cooperativa Amazônia Viva</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet"/>
+    <style>
+        :root {
+            --amazonia-gradient: linear-gradient(135deg, #2d5016, #1a5d1a, #0d4f3c);
+            --amazonia-green: #2d5016;
+            --amazonia-dark: #1a5d1a;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+        }
+        
+        .bg-gradient {
+            background: var(--amazonia-gradient) !important;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(45, 80, 22, 0.7), rgba(26, 93, 26, 0.7)), 
+                        url('https://images.unsplash.com/photo-1502082553048-f009c37129b9?q=80&w=1600&auto=format&fit=crop') center/cover;
+            color: white;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-divider {
+            height: 3px;
+            background: var(--amazonia-gradient);
+            border: none;
+            margin: 4rem 0;
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .btn-amazonia {
+            background: var(--amazonia-gradient);
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-amazonia:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(45, 80, 22, 0.3);
+            color: white;
+        }
+        
+        .decorative-border {
+            border: 3px solid;
+            border-image: var(--amazonia-gradient) 1;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-on-scroll {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--amazonia-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient shadow-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#inicio">🌿 Artes da Amazônia</a>
+            <button aria-controls="navbarsExample" aria-expanded="false" aria-label="Alternar navegação" 
+                    class="navbar-toggler" data-bs-target="#navbarsExample" data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarsExample">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="#inicio">Início</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="#produtos">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h1 class="display-4 fw-bold mb-4 animate-on-scroll">
+                        Artes da Amazônia
+                    </h1>
+                    <p class="lead mb-4 animate-on-scroll">
+                        Conectando tradições ancestrais com sustentabilidade. 
+                        Artesanato autêntico direto das comunidades amazônicas.
+                    </p>
+                    <a href="#sobre" class="btn btn-amazonia btn-lg animate-on-scroll">
+                        Conheça Nossa História
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <!-- Seção Sobre -->
+        <section id="sobre" class="py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <h2 class="display-5 fw-bold mb-4">Sobre a Cooperativa Amazônia Viva</h2>
+                        <p class="lead text-muted mb-4">
+                            Reunimos artesãos ribeirinhos, indígenas e moradores de comunidades tradicionais do Pará. 
+                            Nosso propósito é conectar cultura, sustentabilidade e geração de renda.
+                        </p>
+                        <p class="mb-4">
+                            Com a <strong class="text-success">COP-30</strong> acontecendo em 
+                            <strong class="text-success">Belém do Pará</strong>, apresentamos ao mundo 
+                            a riqueza do artesanato amazônico: cestarias, biojoias, cerâmicas marajoaras 
+                            e tecidos sustentáveis.
+                        </p>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <span class="badge bg-success rounded-pill me-2">✓</span>
+                                    <span>Comércio Justo</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <span class="badge bg-success rounded-pill me-2">✓</span>
+                                    <span>100% Sustentável</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <span class="badge bg-success rounded-pill me-2">✓</span>
+                                    <span>Tradição Ancestral</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <span class="badge bg-success rounded-pill me-2">✓</span>
+                                    <span>Apoio às Comunidades</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img alt="Belém do Pará - Vista aérea da cidade" 
+                             class="img-fluid rounded-4 shadow-lg decorative-border" 
+                             src="https://images.unsplash.com/photo-1610965275376-b3df3fc1a87f?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- Seção Produtos/Artesanato -->
+        <section id="produtos" class="py-5 bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold">Nossos Produtos</h2>
+                    <p class="lead text-muted">Artesanato autêntico com técnicas tradicionais amazônicas</p>
+                </div>
+                
+                <div class="row g-4">
+                    <!-- Cestarias -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow card-hover">
+                            <img alt="Cestarias com fibras naturais da Amazônia" 
+                                 class="card-img-top" style="height: 200px; object-fit: cover;"
+                                 src="https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=600&auto=format&fit=crop"/>
+                            <div class="card-body text-center">
+                                <div class="feature-icon">🧺</div>
+                                <h5 class="card-title fw-bold">Cestarias</h5>
+                                <p class="card-text">Peças únicas feitas com fibras naturais, seguindo técnicas ancestrais.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Biojoias -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow card-hover">
+                            <img alt="Biojoias com sementes amazônicas" 
+                                 class="card-img-top" style="height: 200px; object-fit: cover;"
+                                 src="https://images.unsplash.com/photo-1603349206295-dde1a5b7c1e9?q=80&w=600&auto=format&fit=crop"/>
+                            <div class="card-body text-center">
+                                <div class="feature-icon">💎</div>
+                                <h5 class="card-title fw-bold">Biojoias</h5>
+                                <p class="card-text">Joias sustentáveis com sementes e madeira de manejo responsável.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Cerâmicas -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow card-hover">
+                            <img alt="Cerâmica marajoara tradicional" 
+                                 class="card-img-top" style="height: 200px; object-fit: cover;"
+                                 src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?q=80&w=600&auto=format&fit=crop"/>
+                            <div class="card-body text-center">
+                                <div class="feature-icon">🏺</div>
+                                <h5 class="card-title fw-bold">Cerâmicas Marajoaras</h5>
+                                <p class="card-text">Arte milenar da cultura marajoara, com padrões únicos e tradicionais.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tecidos -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow card-hover">
+                            <img alt="Tecidos tingidos com pigmentos naturais" 
+                                 class="card-img-top" style="height: 200px; object-fit: cover;"
+                                 src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=600&auto=format&fit=crop"/>
+                            <div class="card-body text-center">
+                                <div class="feature-icon">🧵</div>
+                                <h5 class="card-title fw-bold">Tecidos Naturais</h5>
+                                <p class="card-text">Tecidos tingidos com pigmentos extraídos da própria floresta.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeria -->
+        <section class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold">A Amazônia em Imagens</h2>
+                    <p class="lead text-muted">Conheça a diversidade e beleza que inspiram nosso trabalho</p>
+                </div>
+                
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <img alt="Floresta Amazônica exuberante" 
+                             class="img-fluid rounded-4 shadow card-hover" 
+                             src="https://images.unsplash.com/photo-1508780709619-79562169bc64?q=80&w=600&auto=format&fit=crop"/>
+                    </div>
+                    <div class="col-md-4">
+                        <img alt="Fauna diversa da Amazônia" 
+                             class="img-fluid rounded-4 shadow card-hover" 
+                             src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=600&auto=format&fit=crop"/>
+                    </div>
+                    <div class="col-md-4">
+                        <img alt="Comunidade ribeirinha tradicional" 
+                             class="img-fluid rounded-4 shadow card-hover" 
+                             src="https://images.unsplash.com/photo-1520975926210-6c83e2bfc5a4?q=80&w=600&auto=format&fit=crop"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contato" class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">🌿 Artes da Amazônia</h5>
+                    <p class="text-light">Cooperativa Amazônia Viva - Preservando tradições, construindo o futuro.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">Contato</h5>
+                    <p class="text-light mb-1">📍 Belém, Pará - Brasil</p>
+                    <p class="text-light mb-1">📞 (91) 9999-9999</p>
+                    <p class="text-light">✉️ contato@artesdaamazonia.com.br</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">Nossos Valores</h5>
+                    <ul class="list-unstyled text-light">
+                        <li>🌱 Sustentabilidade</li>
+                        <li>🤝 Comércio Justo</li>
+                        <li>🏛️ Preservação Cultural</li>
+                        <li>💚 Responsabilidade Social</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4" style="border-color: #555;">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 small">© 2025 Cooperativa Amazônia Viva. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a class="text-light text-decoration-none me-3" href="#">Política de Privacidade</a>
+                    <a class="text-light text-decoration-none" href="#">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Animação simples ao scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Aplicar animação aos cards
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

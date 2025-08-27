@@ -1,0 +1,16 @@
+
+:root{
+  --amazonia-green: #0a7d5a;
+  --amazonia-forest: #064e3b;
+  --amazonia-accent: #2dd4bf;
+  --amazonia-gradient: linear-gradient(135deg, var(--amazonia-forest), var(--amazonia-green));
+}
+*{ font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif; }
+.btn-primary{ background-color: var(--amazonia-green); border-color: var(--amazonia-green); }
+.btn-primary:hover{ filter: brightness(0.95); }
+.link-secondary{ text-decoration: none; }
+.card-img-top{ object-fit: cover; height: 220px; }
+.carousel-item img{ object-fit: cover; height: 360px; }
+.navbar .nav-link{ color: rgba(255,255,255,.9); }
+.navbar .nav-link:hover{ color: #fff; }
+.footer a:hover{ text-decoration: underline; }
